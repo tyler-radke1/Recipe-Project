@@ -18,11 +18,8 @@ extension RecipesView {
         }
         
         @Published var recipes: [Recipe] = []
-        
-        @Published var searchString = "" 
-        
+        @Published var searchString = ""
         @Published var sortOption: SortOption = .name
-        
         var allRecipes = AllRecipes.shared
         
         var sortedRecipes: [Recipe] {

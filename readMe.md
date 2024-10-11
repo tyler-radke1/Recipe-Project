@@ -5,7 +5,7 @@ Just compile it in xcode and run it! To switch the endpoint to the empty/malform
 I focused on having a UI where the recipes looked concise, and showed all of the relevant data in a way that was simple but looked nice. I also made particular effort to use an MVVM architecture to make sure that concerns were separated and business logic was not done in the UI itself. I did this because even in a simple app, it is important to make sure code is written in a way that is testable and easily maintainable. 
 
 # Time Spent: Approximately how long did you spend working on this project? How did you allocate your time?
-I spend about 3.5 hours on the project total. The bulk of my time was spent on the additonal features, namely the sort function and the search function. The search function in particular gave me trouble because SwiftUIs default search bar doesn't enable you to add toolbar items next to it, so I had to implement my own custom searhc bar.
+I spend about 3.5 hours on the project total. The bulk of my time was spent on the additonal features, namely the sort function and the search function. The search function in particular gave me trouble because SwiftUIs default search bar doesn't enable you to add toolbar items next to it, so I had to implement my own custom search bar.
 
 # Trade-offs and Decisions: Did you make any significant trade-offs in your approach?
 I initially wanted to have a settings view that enabled the user to easily switch between endpoints with a toggle, and while that worked, it didn't fit in line with the project description.

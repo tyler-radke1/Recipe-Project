@@ -44,7 +44,6 @@ class AllRecipes: ObservableObject {
             
             if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                 let decoder = JSONDecoder()
-                
                 let recipes = try decoder.decode(Recipes.self, from: data)
                 return recipes.recipes
             } else {
@@ -56,5 +55,4 @@ class AllRecipes: ObservableObject {
             return [Recipe.malformedRecipes]
         }
     }
-
 }
