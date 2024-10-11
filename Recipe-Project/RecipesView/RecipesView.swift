@@ -84,12 +84,15 @@ struct RecipesView: View {
     
     @ViewBuilder
     func pickerView() -> some View {
-        HStack {
+        HStack(spacing: 0) {
+            Text("Sort By: ")
+                .padding(.leading, 12)
             Picker("Sort by", selection: $vm.sortOption) {
                 ForEach(RecipesView.ViewModel.SortOption.allCases, id: \.self) { option in
                     Text(option.rawValue)
                 }
             }
+            
         }
     }
     

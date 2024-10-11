@@ -40,14 +40,11 @@ class AllRecipes: ObservableObject {
         request.httpMethod = "GET"
 
         do {
-            // Use async/await to fetch data from the URL
             let (data, response) = try await URLSession.shared.data(for: request)
             
-            // Check if response is valid HTTPURLResponse and its status code is OK (200)
             if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                 let decoder = JSONDecoder()
                 
-                // Decode the data to the desired array of Recipe objects
                 let recipes = try decoder.decode(Recipes.self, from: data)
                 return recipes.recipes
             } else {

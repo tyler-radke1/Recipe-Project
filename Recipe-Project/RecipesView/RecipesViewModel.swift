@@ -19,11 +19,7 @@ extension RecipesView {
         
         @Published var recipes: [Recipe] = []
         
-        @Published var searchString = "" {
-            didSet {
-                print(searchString)
-            }
-        }
+        @Published var searchString = "" 
         
         @Published var sortOption: SortOption = .name
         
@@ -37,6 +33,7 @@ extension RecipesView {
                     recipe.name.lowercased().contains(searchString.lowercased()) || recipe.cuisine.lowercased().contains(searchString.lowercased())
                 }
             }
+            
             switch sortOption {
             case .name:
                 return recipesToReturn.sorted { $0.name < $1.name }
